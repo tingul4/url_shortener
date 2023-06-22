@@ -27,7 +27,8 @@ router.post('/', (req, res) => {
   const origin_url = req.body.url
 
   if (!origin_url.trim()) {
-    return res.redirect('/')
+    const isEmpty = true
+    return res.render('index', { isEmpty })
   }
 
   URL.findOne({ origin_url })

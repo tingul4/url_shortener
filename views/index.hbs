@@ -2,3 +2,8 @@
   <input type="text" placeholder="Input URL here" name="url" class="form-control my-3">
 </form>
 <button type="submit" form="url" class="btn btn-outline-primary">Shorten</button>
+{{#if isEmpty}} 
+  <div class="alert alert-danger my-3" role="alert">
+    請輸入網址
+  </div>
+{{/if}}
